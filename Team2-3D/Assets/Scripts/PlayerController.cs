@@ -6,6 +6,11 @@ using UnityEngine;
 // this works so good imma gonna beat up an eldery woman
 public class PlayerController : MonoBehaviour
 {
+
+    GameManager gMScript;
+
+
+
     public float moveSmoothTime;
     public float walkSpeed;
     public float runSpeed;
@@ -24,6 +29,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gMScript = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+
+
         Controller = GetComponent<CharacterController>();  
     }
 
@@ -77,8 +85,34 @@ public class PlayerController : MonoBehaviour
 
 
         Controller.Move(CurrentForceVelocity * Time.deltaTime);
-
-
-
     }
+
+
+
+    //private void //OnTriggerEnter(Collider other)
+   // {
+        //if(other.CompareTag("Pickup"))
+      //  {
+          //  gMScript.pickups++;
+          //  gMScript.UpdateData();
+         //   Destroy(other.gameObject);
+       // }
+    //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
