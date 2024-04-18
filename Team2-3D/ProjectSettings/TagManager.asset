@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Veggie
   - Reach
+  - Pickup
   layers:
   - Default
   - TransparentFX
