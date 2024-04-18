@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WIN.unity
     guid: 2f0e90de65157ce4b9ef2d4121f59b3e
+  - enabled: 1
+    path: Assets/Scenes/Test Movement.unity
+    guid: 17433ee58c3a84c44b4b461953870f9e
   m_configObjects: {}

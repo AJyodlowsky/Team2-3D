@@ -32,6 +32,11 @@ public class UIController : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void OnClickTestScene()
+    {
+        SceneManager.LoadScene("Test Movement");
+
+    }
 
     private void Update()
     {
