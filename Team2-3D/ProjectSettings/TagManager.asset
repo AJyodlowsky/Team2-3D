@@ -8,6 +8,8 @@ TagManager:
   - Reach
   - Pickup
   - GameManager
+  - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
