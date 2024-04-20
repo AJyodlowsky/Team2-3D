@@ -45,6 +45,11 @@ public class UIController : MonoBehaviour
         SceneManager.LoadScene("Credits");
     }
 
+    public void OnClickOptions()
+    {
+        SceneManager.LoadScene("Options");
+    }
+
     public void OnClickMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
