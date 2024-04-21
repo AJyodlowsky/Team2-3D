@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
     public GameObject[] healthImages;
     private int currentHealth = 3;
 
+
+    
+
+
     public int pickups = 0;
     public TMP_Text pickupText;
 
@@ -20,6 +24,8 @@ public class GameManager : MonoBehaviour
     {
         currentHealth = healthImages.Length;
         mainMenuPanel.SetActive(false);
+
+        
     }
 
     public void TakeDamage()
@@ -32,8 +38,9 @@ public class GameManager : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                // Implement logic for player death (e.g., game over)
-                Debug.Log("Player has died!"); // Example message
+                SceneManager.LoadScene("Lose");
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
             }
         }
     }
