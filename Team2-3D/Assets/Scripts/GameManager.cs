@@ -6,6 +6,9 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject[] healthImages;
+    private int currentHealth = 3;
+
     public int pickups = 0;
     public TMP_Text pickupText;
 
@@ -15,12 +18,44 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentHealth = healthImages.Length;
         mainMenuPanel.SetActive(false);
     }
 
+    public void TakeDamage()
+    {
+        if (currentHealth > 0)
+        {
+            currentHealth--; // Decrease health
+
+            UpdateData(); // Update UI to reflect new health
+
+            if (currentHealth <= 0)
+            {
+                // Implement logic for player death (e.g., game over)
+                Debug.Log("Player has died!"); // Example message
+            }
+        }
+    }
+
+
+
     public void UpdateData()
     {
-        
+
+        for (int i = 0; i < healthImages.Length; i++)
+        {
+            if (i < currentHealth)
+            {
+                healthImages[i].SetActive(true); // Show health image
+            }
+            else
+            {
+                healthImages[i].SetActive(false); // Hide health image
+            }
+        }
+
+
         pickupText.text = "Pickups: " + pickups;
     }
 

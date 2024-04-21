@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     GameManager gMScript;
 
-
+    [SerializeField] int health = 3;
 
     public float moveSmoothTime;
     public float walkSpeed;
@@ -31,9 +31,24 @@ public class PlayerController : MonoBehaviour
     {
         gMScript = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
+        gMScript.UpdateData();
+        
 
         Controller = GetComponent<CharacterController>();  
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Damage"))
+        {
+            Destroy(other.gameObject);
+            gMScript.TakeDamage();
+            health--;
+            
+        }
+    }
+
 
     // Update is called once per frame
     void Update()

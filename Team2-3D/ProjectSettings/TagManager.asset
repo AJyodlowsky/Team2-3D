@@ -10,6 +10,11 @@ TagManager:
   - GameManager
   - Enemy
   - Ground
+  - Health1
+  - Health2
+  - Health3
+  - Health
+  - Damage
   layers:
   - Default
   - TransparentFX
@@ -17,8 +22,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Navmesh
+  - Player
   - 
   - 
   - 
