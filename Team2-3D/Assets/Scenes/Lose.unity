@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9528302, g: 0.7932252, b: 0.59926426, a: 1}
+  m_Color: {r: 0.9811321, g: 0.91113645, b: 0.8274831, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -529,6 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f8362da04b4f14da45347d3b2c95d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthImages: []
   pickups: 0
   pickupText: {fileID: 0}
   mainMenuPanel: {fileID: 0}
