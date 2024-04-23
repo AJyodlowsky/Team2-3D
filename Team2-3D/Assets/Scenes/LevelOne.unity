@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3062298, g: 0.108533956, b: 0.1305803, a: 1}
+  m_IndirectSpecularColor: {r: 0.30622983, g: 0.108533986, b: 0.13058034, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12158,7 +12158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthImages: []
   pickups: 0
-  pickupText: {fileID: 0}
+  pickupText: {fileID: 934586446}
   mainMenuPanel: {fileID: 94223086}
 --- !u!1 &934586444
 GameObject:
