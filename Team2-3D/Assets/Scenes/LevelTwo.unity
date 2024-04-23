@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37243453, g: 0.11610625, b: 0.112137504, a: 1}
+  m_IndirectSpecularColor: {r: 1.0239141, g: 0.17122084, b: 0.16705593, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f8362da04b4f14da45347d3b2c95d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthImages: []
   pickups: 0
   pickupText: {fileID: 0}
   mainMenuPanel: {fileID: 0}
@@ -1557,6 +1558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d4471a763e3b443881389efc24b948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 3
   moveSmoothTime: 0.1
   walkSpeed: 9.81
   runSpeed: 6
