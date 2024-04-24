@@ -289,6 +289,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthImages: []
+  audioSource: {fileID: 0}
+  pickupSFX: {fileID: 0}
+  SnakeSFX: {fileID: 0}
   pickups: 0
   pickupText: {fileID: 1482897168}
   mainMenuPanel: {fileID: 776837363}
@@ -1877,7 +1880,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.115
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
