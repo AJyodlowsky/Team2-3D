@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-
+    GameManager gMScript;
     public GameObject player;
 
     NavMeshAgent agent;
@@ -29,6 +29,7 @@ public class EnemyAI : MonoBehaviour
 
     void Chase()
     {
+        
         agent.SetDestination(player.transform.position);
     }
 
@@ -55,6 +56,7 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gMScript = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("Player");
     }
@@ -67,7 +69,12 @@ public class EnemyAI : MonoBehaviour
 
 
         if(!playerInSight && !playerInAttackRange) Patrol();
-        if (playerInSight && !playerInAttackRange) Chase();
+        if (playerInSight && !playerInAttackRange)
+        {
+            Chase();
+            gMScript.audioSource.clip = gMScript.SnakeSFX;
+            gMScript.audioSource.Play();
+        }        
         if (playerInSight && playerInAttackRange) Attack();
     }
 }

@@ -10,7 +10,9 @@ public class GameManager : MonoBehaviour
     private int currentHealth = 3;
 
 
-    
+    public AudioSource audioSource;
+    public AudioClip pickupSFX;
+    public AudioClip SnakeSFX;
 
 
     public int pickups = 0;
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         currentHealth = healthImages.Length;
         mainMenuPanel.SetActive(false);
 

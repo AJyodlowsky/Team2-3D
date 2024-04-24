@@ -16,10 +16,13 @@ public class PickupScript : MonoBehaviour
 
     public bool inReach;
 
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
+        
         gMScript = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         inReach = false;    
         hasPickUp = false;
@@ -50,6 +53,9 @@ public class PickupScript : MonoBehaviour
     {
         if(inReach == true && Input.GetKeyUp(KeyCode.E))
         {
+            gMScript.audioSource.clip = gMScript.pickupSFX;
+            gMScript.audioSource.Play();
+
             gMScript.pickups++;
             gMScript.UpdateData();
             hasPickUp = true;
