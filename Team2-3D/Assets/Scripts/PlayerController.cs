@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public float runSpeed;
     public float jumpForce;
     public float gravityStrength;
+    
 
     // DON'T TOUCH MY CODE YOU HEATHENS
     
