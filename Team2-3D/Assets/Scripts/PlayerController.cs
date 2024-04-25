@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         if(other.CompareTag("Damage"))
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
             gMScript.TakeDamage();
             health--;
             
