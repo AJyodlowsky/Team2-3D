@@ -53,14 +53,15 @@ public class PickupScript : MonoBehaviour
     {
         if(inReach == true && Input.GetKeyUp(KeyCode.E))
         {
-            gMScript.audioSource.clip = gMScript.pickupSFX;
-            gMScript.audioSource.Play();
-
+            
             gMScript.pickups++;
             gMScript.UpdateData();
             hasPickUp = true;
             pickupOBJ.SetActive(false);
             pickupText.SetActive(false);
+
+            gMScript.audioSource.clip = gMScript.pickupSFX;
+            gMScript.audioSource.Play();
         }
     }
 
