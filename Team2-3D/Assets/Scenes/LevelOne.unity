@@ -23,9 +23,9 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 6.55
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.5807227, g: 0.65666616, b: 0.8490566, a: 1}
+  m_SubtractiveShadowColor: {r: 0.9716981, g: 0.65514034, b: 0.03116761, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: a9e6a97e80205e441ab43e91d703b70d, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.30624378, g: 0.10853618, b: 0.13058251, a: 1}
+  m_IndirectSpecularColor: {r: 0.30622983, g: 0.108533986, b: 0.13058034, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -36716,7 +36716,7 @@ Transform:
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 6.7, y: 35, z: -11.5}
+  m_LocalPosition: {x: 30.5, y: 62.8, z: -52.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51421,7 +51421,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6125835, y: 0.2173333}
   m_AnchorMax: {x: 0.864, y: 0.46940744}
-  m_AnchoredPosition: {x: -6.4128113, y: 2.5000153}
+  m_AnchoredPosition: {x: -6.4128113, y: 2.5}
   m_SizeDelta: {x: 79.1466, y: 21.119598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1100027813

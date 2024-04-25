@@ -48,7 +48,7 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inReach &&  gMScript.pickups == 5 && Input.GetKeyDown(KeyCode.E))
+        if (inReach &&  gMScript.pickups == 3 && Input.GetKeyDown(KeyCode.E))
         {
             DoorOpens();
         }
