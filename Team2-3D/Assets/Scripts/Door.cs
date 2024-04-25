@@ -5,6 +5,9 @@ using TMPro;
 
 public class Door : MonoBehaviour
 {
+
+    GameManager gMScript;
+
     public Animator door;
     public GameObject openText;
 
@@ -13,6 +16,11 @@ public class Door : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
+        gMScript = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+
+
         inReach = false; 
     }
 
@@ -40,7 +48,7 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inReach && Input.GetKeyDown(KeyCode.E))
+        if (inReach &&  gMScript.pickups == 5 && Input.GetKeyDown(KeyCode.E))
         {
             DoorOpens();
         }
@@ -54,7 +62,7 @@ public class Door : MonoBehaviour
 
     void DoorOpens()
     {
-        Debug.Log("Opens");
+        
         door.SetBool("Open", true);
         door.SetBool("Closed", false);
     }
@@ -62,7 +70,7 @@ public class Door : MonoBehaviour
 
     void DoorCloses()
     {
-        Debug.Log("Closes");
+        
         door.SetBool("Open", false);
         door.SetBool("Closed", true);
     }
