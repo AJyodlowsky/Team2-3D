@@ -13,10 +13,12 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip pickupSFX;
     public AudioClip SnakeSFX;
+    public AudioClip gotHurtSFX;
 
 
     public int pickups = 0;
     public TMP_Text pickupText;
+    public GameObject enoughPickupsText;
 
     public GameObject mainMenuPanel;
 

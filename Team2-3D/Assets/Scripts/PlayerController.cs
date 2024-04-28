@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 // this works so good imma gonna beat up an eldery woman
@@ -39,6 +40,12 @@ public class PlayerController : MonoBehaviour
     }
 
 
+   
+
+
+
+
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Damage"))
@@ -46,8 +53,17 @@ public class PlayerController : MonoBehaviour
             //Destroy(other.gameObject);
             gMScript.TakeDamage();
             health--;
+            gMScript.audioSource.clip = gMScript.gotHurtSFX;
+            gMScript.audioSource.Play();
             
         }
+
+
+        if (other.CompareTag("Lvl2")) //add transition here
+        {
+            SceneManager.LoadScene("LevelTwo");
+        }
+
     }
 
 

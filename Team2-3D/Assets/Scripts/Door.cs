@@ -8,6 +8,8 @@ public class Door : MonoBehaviour
 
     GameManager gMScript;
 
+    //public GameObject enoughPickupsText;
+
     public Animator door;
     public GameObject openText;
 
@@ -16,7 +18,7 @@ public class Door : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //enoughPickupsText.SetActive(false);
 
         gMScript = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
@@ -24,12 +26,14 @@ public class Door : MonoBehaviour
         inReach = false; 
     }
 
+    
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Reach")
         {
             inReach = true;
-            openText.SetActive(true);
+           openText.SetActive(true);
         }
     }
 
@@ -48,7 +52,7 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inReach &&  gMScript.pickups == 3 && Input.GetKeyDown(KeyCode.E))
+        if (inReach && gMScript.pickups == 3 && Input.GetKeyDown(KeyCode.E))
         {
             DoorOpens();
         }
