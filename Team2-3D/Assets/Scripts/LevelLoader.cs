@@ -13,14 +13,14 @@ public class LevelLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
+        //if (Input.GetMouseButtonDown(0))      Just add this to gamemanager
+        //{
 
-            LoadNextLevel();
-            Debug.Log("The transition button was hit.");
+           // LoadNextLevel();
+           // Debug.Log("The transition button was hit.");
                
 
-        }
+       // }
 
 
         void LoadNextLevel()

@@ -37,7 +37,9 @@ public class GameManager : MonoBehaviour
     {
         if (currentHealth > 0)
         {
-            currentHealth--; // Decrease health
+            currentHealth--;
+            audioSource.clip = gotHurtSFX;
+            audioSource.Play();// Decrease health
 
             UpdateData(); // Update UI to reflect new health
 

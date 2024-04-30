@@ -53,8 +53,8 @@ public class PlayerController : MonoBehaviour
             //Destroy(other.gameObject);
             gMScript.TakeDamage();
             health--;
-            gMScript.audioSource.clip = gMScript.gotHurtSFX;
-            gMScript.audioSource.Play();
+            ///gMScript.audioSource.clip = gMScript.gotHurtSFX;
+            ///gMScript.audioSource.Play();
             
         }
 
