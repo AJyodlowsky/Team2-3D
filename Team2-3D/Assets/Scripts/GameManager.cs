@@ -29,21 +29,22 @@ public class GameManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         currentHealth = healthImages.Length;
         mainMenuPanel.SetActive(false);
-        Level2WinCondition();
+       // Win();
 
         
     }
 
-    public void Level2WinCondition()
+    /*public void Win()
     {
         string currentScene;
         currentScene = SceneManager.GetActiveScene().name;
 
-        if(currentScene == "LevelTwo" && pickups == 3)
+        if(//currentScene == "WIN")
         {
-            SceneManager.LoadScene("WIN");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
-    }
+    } */
 
 
 
@@ -93,7 +94,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Q))
+       
+
+
+
+
+        if (Input.GetKeyUp(KeyCode.Q))
         {
             mainMenuPanel.SetActive(true);
             Cursor.visible = true;

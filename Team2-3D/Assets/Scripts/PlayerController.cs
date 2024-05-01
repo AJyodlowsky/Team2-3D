@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
         Controller = GetComponent<CharacterController>();
 
-        gMScript.Level2WinCondition(); //why work pls
+        
 
 
     }
@@ -57,8 +57,8 @@ public class PlayerController : MonoBehaviour
             //Destroy(other.gameObject);
             gMScript.TakeDamage();
             health--;
-            ///gMScript.audioSource.clip = gMScript.gotHurtSFX;
-            ///gMScript.audioSource.Play();
+            gMScript.audioSource.clip = gMScript.gotHurtSFX;
+            gMScript.audioSource.Play();
             
         }
 
@@ -66,6 +66,13 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Lvl2")) //add transition here
         {
             SceneManager.LoadScene("LevelTwo");
+        }
+
+        if(other.CompareTag("Win"))
+        {
+            SceneManager.LoadScene("WIN");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
 
     }
