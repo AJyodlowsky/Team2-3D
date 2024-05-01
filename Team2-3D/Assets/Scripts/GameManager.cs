@@ -29,9 +29,23 @@ public class GameManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         currentHealth = healthImages.Length;
         mainMenuPanel.SetActive(false);
+        Level2WinCondition();
 
         
     }
+
+    public void Level2WinCondition()
+    {
+        string currentScene;
+        currentScene = SceneManager.GetActiveScene().name;
+
+        if(currentScene == "LevelTwo" && pickups == 3)
+        {
+            SceneManager.LoadScene("WIN");
+        }
+    }
+
+
 
     public void TakeDamage()
     {

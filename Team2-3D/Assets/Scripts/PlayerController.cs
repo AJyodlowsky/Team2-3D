@@ -36,7 +36,11 @@ public class PlayerController : MonoBehaviour
         gMScript.UpdateData();
         
 
-        Controller = GetComponent<CharacterController>();  
+        Controller = GetComponent<CharacterController>();
+
+        gMScript.Level2WinCondition(); //why work pls
+
+
     }
 
 
